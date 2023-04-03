@@ -4,13 +4,51 @@
       "name": "app",
       "type": "ru.tinkoff.edu.java.scrapper.configuration.ApplicationConfig",
       "sourceType": "ru.tinkoff.edu.java.scrapper.configuration.ApplicationConfig"
+    },
+    {
+      "name": "app.scheduler",
+      "type": "ru.tinkoff.edu.java.scrapper.configuration.ApplicationConfig$Scheduler",
+      "sourceType": "ru.tinkoff.edu.java.scrapper.configuration.ApplicationConfig"
+    },
+    {
+      "name": "github-client",
+      "type": "ru.tinkoff.edu.java.scrapper.configuration.GitHubConfiguration",
+      "sourceType": "ru.tinkoff.edu.java.scrapper.configuration.GitHubConfiguration"
+    },
+    {
+      "name": "stackoverflow-client",
+      "type": "ru.tinkoff.edu.java.scrapper.configuration.StackOverflowConfiguration",
+      "sourceType": "ru.tinkoff.edu.java.scrapper.configuration.StackOverflowConfiguration"
     }
   ],
   "properties": [
     {
+      "name": "app.scheduler.interval",
+      "type": "java.time.Duration",
+      "sourceType": "ru.tinkoff.edu.java.scrapper.configuration.ApplicationConfig$Scheduler"
+    },
+    {
       "name": "app.test",
       "type": "java.lang.String",
       "sourceType": "ru.tinkoff.edu.java.scrapper.configuration.ApplicationConfig"
+    },
+    {
+      "name": "github-client.api-version",
+      "type": "java.lang.String",
+      "sourceType": "ru.tinkoff.edu.java.scrapper.configuration.GitHubConfiguration",
+      "defaultValue": "2022-11-28"
+    },
+    {
+      "name": "github-client.base-url",
+      "type": "java.lang.String",
+      "sourceType": "ru.tinkoff.edu.java.scrapper.configuration.GitHubConfiguration",
+      "defaultValue": "https:\/\/api.github.com"
+    },
+    {
+      "name": "stackoverflow-client.base-url",
+      "type": "java.lang.String",
+      "sourceType": "ru.tinkoff.edu.java.scrapper.configuration.StackOverflowConfiguration",
+      "defaultValue": "https:\/\/api.stackexchange.com\/2.3"
     }
   ],
   "hints": []

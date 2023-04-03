@@ -1,6 +1,8 @@
-/root/repo2/ProjectT/project/link-parser/src/main/java/ru/tinkoff/edu/java/link_parser/data/ParserData.java
-/root/repo2/ProjectT/project/link-parser/src/main/java/ru/tinkoff/edu/java/link_parser/parser/LinkParser.java
-/root/repo2/ProjectT/project/link-parser/src/main/java/ru/tinkoff/edu/java/link_parser/parser/StackOverflowLinkParser.java
-/root/repo2/ProjectT/project/link-parser/src/main/java/ru/tinkoff/edu/java/link_parser/data/GithubParserData.java
-/root/repo2/ProjectT/project/link-parser/src/main/java/ru/tinkoff/edu/java/link_parser/data/StackOverflowParserData.java
-/root/repo2/ProjectT/project/link-parser/src/main/java/ru/tinkoff/edu/java/link_parser/parser/GithubLinkParser.java
+/root/repo2/ProjectT/project/link-parser/src/main/java/ru/tinkoff/edu/java/parser/LinkChainParser.java
+/root/repo2/ProjectT/project/link-parser/src/main/java/ru/tinkoff/edu/java/response/BaseResponse.java
+/root/repo2/ProjectT/project/link-parser/src/main/java/ru/tinkoff/edu/java/parser/LinkParser.java
+/root/repo2/ProjectT/project/link-parser/src/main/java/ru/tinkoff/edu/java/response/StackOverflowResponse.java
+/root/repo2/ProjectT/project/link-parser/src/main/java/ru/tinkoff/edu/java/parser/GitHubParser.java
+/root/repo2/ProjectT/project/link-parser/src/main/java/ru/tinkoff/edu/java/parser/StackOverflowParser.java
+/root/repo2/ProjectT/project/link-parser/src/main/java/ru/tinkoff/edu/java/App.java
+/root/repo2/ProjectT/project/link-parser/src/main/java/ru/tinkoff/edu/java/response/GitHubResponse.java

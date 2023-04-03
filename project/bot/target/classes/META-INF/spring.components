@@ -1,2 +1,4 @@
 ru.tinkoff.edu.java.bot.BotApplication=org.springframework.stereotype.Component,org.springframework.boot.SpringBootConfiguration
 ru.tinkoff.edu.java.bot.configuration.ApplicationConfig=org.springframework.boot.context.properties.ConfigurationProperties
+ru.tinkoff.edu.java.bot.controller.GeneralExceptionHandler=org.springframework.stereotype.Component
+ru.tinkoff.edu.java.bot.controller.UpdateController=org.springframework.stereotype.Component

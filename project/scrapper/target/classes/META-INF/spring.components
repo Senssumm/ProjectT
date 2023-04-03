@@ -1,2 +1,9 @@
 ru.tinkoff.edu.java.scrapper.ScrapperApplication=org.springframework.stereotype.Component,org.springframework.boot.SpringBootConfiguration
 ru.tinkoff.edu.java.scrapper.configuration.ApplicationConfig=org.springframework.boot.context.properties.ConfigurationProperties
+ru.tinkoff.edu.java.scrapper.configuration.ClientConfiguration=org.springframework.stereotype.Component
+ru.tinkoff.edu.java.scrapper.configuration.GitHubConfiguration=org.springframework.boot.context.properties.ConfigurationProperties
+ru.tinkoff.edu.java.scrapper.configuration.StackOverflowConfiguration=org.springframework.boot.context.properties.ConfigurationProperties
+ru.tinkoff.edu.java.scrapper.controller.GeneralExceptionHandler=org.springframework.stereotype.Component
+ru.tinkoff.edu.java.scrapper.controller.LinkController=org.springframework.stereotype.Component
+ru.tinkoff.edu.java.scrapper.controller.TelegramChatController=org.springframework.stereotype.Component
+ru.tinkoff.edu.java.scrapper.scheduling.LinkUpdaterScheduler=org.springframework.stereotype.Component
