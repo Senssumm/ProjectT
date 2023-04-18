@@ -1,31 +1,29 @@
 package ru.tinkoff.edu.java.scrapper.configuration;
 
-
-import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.reactive.function.client.WebClient;
+import org.springframework.web.reactive.function.client.support.WebClientAdapter;
+import org.springframework.web.service.invoker.HttpServiceProxyFactory;
 import ru.tinkoff.edu.java.scrapper.client.GitHubClient;
-import ru.tinkoff.edu.java.scrapper.client.StackOverflowClient;
+import ru.tinkoff.edu.java.scrapper.client.StackExchangeClient;
 
 @Configuration
-@RequiredArgsConstructor
 public class ClientConfiguration {
-    private final GitHubConfiguration gitHubConfiguration;
-    private final StackOverflowConfiguration stackOverflowConfiguration;
-
     @Bean
-    public GitHubClient gitHubClient() {
-        return GitHubClient.fromConfig(gitHubConfiguration);
-
+    public GitHubClient getGitHubClient(ApplicationConfig applicationConfig) {
+        return createWebClient(GitHubClient.class, applicationConfig.webClient().github().baseUrl());
     }
 
     @Bean
-    public StackOverflowClient stackOverflowClient() {
-        return StackOverflowClient.fromConfig(stackOverflowConfiguration);
+    public StackExchangeClient getStackExchangeClient(ApplicationConfig applicationConfig) {
+        return createWebClient(StackExchangeClient.class, applicationConfig.webClient().stackExchange().baseUrl());
     }
 
-    @Bean
-    public long linkUpdateSchedulerIntervalMs(ApplicationConfig config) {
-        return config.scheduler().interval().toMillis();
+    private <T> T createWebClient(Class<T> clientClass, String baseUrl) {
+        WebClient client = WebClient.builder().baseUrl(baseUrl).build();
+        HttpServiceProxyFactory factory = HttpServiceProxyFactory.builder(WebClientAdapter.forClient(client)).build();
+
+        return factory.createClient(clientClass);
     }
 }

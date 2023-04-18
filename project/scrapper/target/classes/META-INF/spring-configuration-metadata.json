@@ -1,0 +1,27 @@
+{
+  "groups": [
+    {
+      "name": "app",
+      "type": "ru.tinkoff.edu.java.scrapper.configuration.ApplicationConfig",
+      "sourceType": "ru.tinkoff.edu.java.scrapper.configuration.ApplicationConfig"
+    }
+  ],
+  "properties": [
+    {
+      "name": "app.error-description",
+      "type": "ru.tinkoff.edu.java.scrapper.configuration.ErrorDescription",
+      "sourceType": "ru.tinkoff.edu.java.scrapper.configuration.ApplicationConfig"
+    },
+    {
+      "name": "app.scheduler",
+      "type": "ru.tinkoff.edu.java.scrapper.configuration.Scheduler",
+      "sourceType": "ru.tinkoff.edu.java.scrapper.configuration.ApplicationConfig"
+    },
+    {
+      "name": "app.web-client",
+      "type": "ru.tinkoff.edu.java.scrapper.configuration.WebClient",
+      "sourceType": "ru.tinkoff.edu.java.scrapper.configuration.ApplicationConfig"
+    }
+  ],
+  "hints": []
+}
