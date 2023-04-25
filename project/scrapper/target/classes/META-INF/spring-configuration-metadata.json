@@ -8,6 +8,11 @@
   ],
   "properties": [
     {
+      "name": "app.database",
+      "type": "ru.tinkoff.edu.java.scrapper.configuration.Database",
+      "sourceType": "ru.tinkoff.edu.java.scrapper.configuration.ApplicationConfig"
+    },
+    {
       "name": "app.error-description",
       "type": "ru.tinkoff.edu.java.scrapper.configuration.ErrorDescription",
       "sourceType": "ru.tinkoff.edu.java.scrapper.configuration.ApplicationConfig"

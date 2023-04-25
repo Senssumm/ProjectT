@@ -4,6 +4,11 @@
       "name": "app",
       "type": "ru.tinkoff.edu.java.bot.configuration.ApplicationConfig",
       "sourceType": "ru.tinkoff.edu.java.bot.configuration.ApplicationConfig"
+    },
+    {
+      "name": "app.message",
+      "type": "ru.tinkoff.edu.java.bot.configuration.ApplicationConfig$Message",
+      "sourceType": "ru.tinkoff.edu.java.bot.configuration.ApplicationConfig"
     }
   ],
   "properties": [
@@ -21,6 +26,21 @@
       "name": "app.error-description",
       "type": "ru.tinkoff.edu.java.bot.configuration.ErrorDescription",
       "sourceType": "ru.tinkoff.edu.java.bot.configuration.ApplicationConfig"
+    },
+    {
+      "name": "app.message.error",
+      "type": "java.lang.String",
+      "sourceType": "ru.tinkoff.edu.java.bot.configuration.ApplicationConfig$Message"
+    },
+    {
+      "name": "app.message.unsupported-link",
+      "type": "java.lang.String",
+      "sourceType": "ru.tinkoff.edu.java.bot.configuration.ApplicationConfig$Message"
+    },
+    {
+      "name": "app.message.update",
+      "type": "java.lang.String",
+      "sourceType": "ru.tinkoff.edu.java.bot.configuration.ApplicationConfig$Message"
     },
     {
       "name": "app.web-client",
