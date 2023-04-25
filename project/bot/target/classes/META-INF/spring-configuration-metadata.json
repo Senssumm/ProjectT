@@ -33,6 +33,16 @@
       "sourceType": "ru.tinkoff.edu.java.bot.configuration.ApplicationConfig$Message"
     },
     {
+      "name": "app.message.github-issue-update",
+      "type": "java.lang.String",
+      "sourceType": "ru.tinkoff.edu.java.bot.configuration.ApplicationConfig$Message"
+    },
+    {
+      "name": "app.message.stackoverflow-answer-update",
+      "type": "java.lang.String",
+      "sourceType": "ru.tinkoff.edu.java.bot.configuration.ApplicationConfig$Message"
+    },
+    {
       "name": "app.message.unsupported-link",
       "type": "java.lang.String",
       "sourceType": "ru.tinkoff.edu.java.bot.configuration.ApplicationConfig$Message"
