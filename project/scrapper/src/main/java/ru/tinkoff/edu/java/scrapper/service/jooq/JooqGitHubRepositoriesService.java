@@ -1,7 +1,6 @@
 package ru.tinkoff.edu.java.scrapper.service.jooq;
 
 import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Service;
 import ru.tinkoff.edu.java.link_parser.github.GitHubParserResult;
 import ru.tinkoff.edu.java.scrapper.client.GitHubClient;
 import ru.tinkoff.edu.java.scrapper.configuration.ApplicationConfig;
@@ -21,9 +20,8 @@ import java.util.List;
 
 import static ru.tinkoff.edu.java.scrapper.domain.jooq.Tables.GITHUB_REPOSITORIES;
 
-@Service
 @RequiredArgsConstructor
-class JooqGitHubRepositoriesService
+public class JooqGitHubRepositoriesService
         extends GitHubRepositoriesService
         implements FindOrDoService<GitHubRepository, GitHubParserResult>,
         GitHubIssuesService {

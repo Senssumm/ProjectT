@@ -13,13 +13,28 @@
       "sourceType": "ru.tinkoff.edu.java.scrapper.configuration.ApplicationConfig"
     },
     {
+      "name": "app.database-access-type",
+      "type": "ru.tinkoff.edu.java.scrapper.configuration.ApplicationConfig$DatabaseAccessType",
+      "sourceType": "ru.tinkoff.edu.java.scrapper.configuration.ApplicationConfig"
+    },
+    {
       "name": "app.error-description",
       "type": "ru.tinkoff.edu.java.scrapper.configuration.ErrorDescription",
       "sourceType": "ru.tinkoff.edu.java.scrapper.configuration.ApplicationConfig"
     },
     {
+      "name": "app.rabbit-m-q",
+      "type": "ru.tinkoff.edu.java.scrapper.configuration.ApplicationConfig$RabbitMQ",
+      "sourceType": "ru.tinkoff.edu.java.scrapper.configuration.ApplicationConfig"
+    },
+    {
       "name": "app.scheduler",
       "type": "ru.tinkoff.edu.java.scrapper.configuration.Scheduler",
+      "sourceType": "ru.tinkoff.edu.java.scrapper.configuration.ApplicationConfig"
+    },
+    {
+      "name": "app.use-queue",
+      "type": "java.lang.Boolean",
       "sourceType": "ru.tinkoff.edu.java.scrapper.configuration.ApplicationConfig"
     },
     {

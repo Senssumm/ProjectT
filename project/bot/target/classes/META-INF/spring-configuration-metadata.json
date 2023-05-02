@@ -9,6 +9,11 @@
       "name": "app.message",
       "type": "ru.tinkoff.edu.java.bot.configuration.ApplicationConfig$Message",
       "sourceType": "ru.tinkoff.edu.java.bot.configuration.ApplicationConfig"
+    },
+    {
+      "name": "app.rabbit-m-q",
+      "type": "ru.tinkoff.edu.java.bot.configuration.ApplicationConfig$RabbitMQ",
+      "sourceType": "ru.tinkoff.edu.java.bot.configuration.ApplicationConfig"
     }
   ],
   "properties": [
@@ -51,6 +56,16 @@
       "name": "app.message.update",
       "type": "java.lang.String",
       "sourceType": "ru.tinkoff.edu.java.bot.configuration.ApplicationConfig$Message"
+    },
+    {
+      "name": "app.rabbit-m-q.exchange-name",
+      "type": "java.lang.String",
+      "sourceType": "ru.tinkoff.edu.java.bot.configuration.ApplicationConfig$RabbitMQ"
+    },
+    {
+      "name": "app.rabbit-m-q.queue-name",
+      "type": "java.lang.String",
+      "sourceType": "ru.tinkoff.edu.java.bot.configuration.ApplicationConfig$RabbitMQ"
     },
     {
       "name": "app.web-client",
