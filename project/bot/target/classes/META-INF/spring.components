@@ -4,6 +4,7 @@ ru.tinkoff.edu.java.bot.client.WebClientErrorHandler=org.springframework.stereot
 ru.tinkoff.edu.java.bot.configuration.ApplicationConfig=org.springframework.boot.context.properties.ConfigurationProperties
 ru.tinkoff.edu.java.bot.configuration.ClientConfig=org.springframework.stereotype.Component
 ru.tinkoff.edu.java.bot.configuration.DeadLetterQueueConfiguration=org.springframework.stereotype.Component
+ru.tinkoff.edu.java.bot.configuration.MetricsConfig=org.springframework.stereotype.Component
 ru.tinkoff.edu.java.bot.configuration.RabbitMQConfiguration=org.springframework.stereotype.Component
 ru.tinkoff.edu.java.bot.controller.BotController=org.springframework.stereotype.Component
 ru.tinkoff.edu.java.bot.queue.listener.UpdatesQueueListener=org.springframework.stereotype.Component
