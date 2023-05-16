@@ -1,1 +1,2 @@
 ru.tinkoff.edu.java.scrapper.configuration.TestDataSourceConfig=org.springframework.stereotype.Component
+ru.tinkoff.edu.java.scrapper.configuration.TransactionConfig=org.springframework.stereotype.Component

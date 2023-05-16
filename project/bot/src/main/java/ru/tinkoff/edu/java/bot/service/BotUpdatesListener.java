@@ -5,6 +5,7 @@ import com.pengrad.telegrambot.model.Message;
 import com.pengrad.telegrambot.model.MessageEntity;
 import com.pengrad.telegrambot.model.Update;
 import com.pengrad.telegrambot.model.User;
+import io.micrometer.core.instrument.Counter;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
@@ -21,12 +22,13 @@ import java.util.Optional;
 @Component
 @RequiredArgsConstructor
 @Slf4j
-public class BotUpdatesListener implements UpdatesListener {
+public final class BotUpdatesListener implements UpdatesListener {
     private final BotCommandService botCommandService;
     private final BotMenuButtonService botMenuButtonService;
     private final UserResponseService userResponseService;
     private final ApplicationConfig applicationConfig;
     private final WebClientErrorHandler webClientErrorHandler;
+    private final Counter telegramMessagesHandled;
 
     @Override
     public int process(List<Update> updates) {
@@ -49,14 +51,18 @@ public class BotUpdatesListener implements UpdatesListener {
 
     private void processUpdate(Update update) {
         log.info(new UpdateLog(update).toString());
-        var message = Optional.ofNullable(update.message());
+        Optional.ofNullable(update.message())
+                .ifPresent(this::processMessage);
+    }
 
-        message.map(Message::entities).ifPresentOrElse(
-                messageEntities ->
-                        Arrays.stream(messageEntities)
-                                .forEach(entity -> processMessageEntity(entity, update.message())),
-                () -> message.ifPresent(botMenuButtonService::handleMessage)
-        );
+    private void processMessage(Message message) {
+        if (Objects.nonNull(message.entities())) {
+            Arrays.stream(message.entities())
+                    .forEach(entity -> processMessageEntity(entity, message));
+        } else {
+            botMenuButtonService.handleMessage(message);
+        }
+        telegramMessagesHandled.increment();
     }
 
     private void processMessageEntity(MessageEntity messageEntity, Message message) {
@@ -66,6 +72,8 @@ public class BotUpdatesListener implements UpdatesListener {
         switch (messageEntity.type()) {
             case bot_command -> botCommandService.handleCommandEntity(message, messageEntity);
             case url -> botMenuButtonService.handleMessage(message);
+            default -> {
+            }
         }
     }
 
